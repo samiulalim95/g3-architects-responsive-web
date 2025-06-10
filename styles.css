@@ -25,8 +25,6 @@
     background-color: rgba(255, 144, 14, 0.1);
 }
 .btn-primary{
-    /* width: 180px; */
-    /* height: 64px; */
     flex-shrink: 0;
     border-radius: 8px;
     border: none;
@@ -155,28 +153,10 @@ main > section{
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* some facts related styles */
 .facts-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 125px;
-    margin: 50px auto;
-    justify-items: center; */
 }
 .fact-card{
     border-radius: 8px;
@@ -231,20 +211,6 @@ footer{
     font-weight: 400;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------responsive media query---------*/
 /* small device */
 @media screen and (max-width: 576px) {
@@ -267,6 +233,27 @@ footer{
     #experience-badge{
         margin-top: 20px;
         margin-left: 20px;
+    }
+     /* horizontal scrolling marquee effect  */
+    .sponsor-companies {
+        display: flex;
+        gap: 40px;
+        animation: scroll 10s linear infinite;
+        overflow: hidden;
+        white-space: nowrap;
+        width: max-content;
+    }
+    .sponsor-companies img {
+        height: 50px;
+        flex-shrink: 0;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 }
 /* medium device */
